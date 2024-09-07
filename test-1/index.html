@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer-settings">
+            <label for="pomodoro">Pomodoro (minutes):</label>
+            <input type="number" id="pomodoro" value="25" min="1" max="60">
+            <label for="shortBreak">Short Break (minutes):</label>
+            <input type="number" id="shortBreak" value="5" min="1" max="30">
+            <label for="longBreak">Long Break (minutes):</label>
+            <input type="number" id="longBreak" value="15" min="1" max="60">
+        </div>
+
+        <div class="select-mode">
+            <button id="pomodoroMode">Pomodoro</button>
+            <button id="shortBreakMode">Short Break</button>
+            <button id="longBreakMode">Long Break</button>
+        </div>
+
+        <div id="timerDisplay">25:00</div>
+
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+        <div class="alarm-settings">
+            <label for="alarmSound">Alarm Sound:</label>
+            <select id="alarmSound">
+                <option value="alarm1.mp3">Alarm 1</option>
+                <option value="alarm2.mp3">Alarm 2</option>
+                <option value="alarm3.mp3">Alarm 3</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="clock.js"></script>
+</body>
+</html>

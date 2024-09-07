@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer-header">
+            <div class="timer-title">Personal</div>
+            <button class="settings-button" onclick="toggleSettings()">&#9881;</button>
+        </div>
+        <div class="timer-display">
+            <span id="time-display">20:00</span>
+            <button id="start-pause-button" onclick="startPauseTimer()">Start</button>
+            <button id="reset-button" onclick="resetTimer()">&#10227;</button>
+        </div>
+        <div class="timer-options">
+            <button class="timer-mode active" onclick="setTimerMode('pomodoro')">Pomodoro</button>
+            <button class="timer-mode" onclick="setTimerMode('shortBreak')">Short Break</button>
+            <button class="timer-mode" onclick="setTimerMode('longBreak')">Long Break</button>
+        </div>
+        <div class="timer-settings" id="timer-settings">
+            <label>
+                <input type="checkbox" id="auto-transition" checked> Auto-transition Timer
+            </label>
+            <label>
+                <input type="checkbox" id="hide-pomodoro-count"> Hide Pomodoro Count
+            </label>
+            <div class="time-settings">
+                <label>Pomodoro <input type="number" id="pomodoro-time" value="20" min="1"></label>
+                <label>Short Break <input type="number" id="short-break-time" value="5" min="1"></label>
+                <label>Long Break <input type="number" id="long-break-time" value="15" min="1"></label>
+            </div>
+            <div class="sound-settings">
+                <label>Timer Sound
+                    <select id="timer-sound">
+                        <option value="twinkle">Twinkle</option>
+                        <option value="bell">Bell</option>
+                        <option value="chime">Chime</option>
+                    </select>
+                </label>
+                <input type="range" id="volume-control" min="0" max="100" value="50">
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer4+2.3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="show-timer-button" onclick="showTimer()">Show Timer</button>
+
+    <div id="overlay"></div>
+    <div id="timer-container" class="timer-container">
+        <div class="timer-header">
+            <select id="mode-select" onchange="setMode(this.value)">
+                <option value="Personal">Personal</option>
+                <option value="Group">Group</option>
+            </select>
+            <span class="pomodoro-rounds" id="pomodoro-rounds">Round : </span>
+            <button class="minimize-button" onclick="minimizeTimer()">&#8722;</button>
+            </div>
+        <div class="timer-display">
+            <span id="time-display">00:00</span>
+            <button id="start-pause-button" onclick="startPauseTimer()">Start</button>
+            <button id="reset-button" onclick="resetTimer()">&#10227;</button>
+            <button class="settings-button" onclick="toggleSettings()">&#9881;</button>
+        </div>
+        <div class="timer-options">
+            <button class="timer-mode active" onclick="setTimerMode('pomodoro')">Pomodoro</button>
+            <button class="timer-mode" onclick="setTimerMode('shortBreak')">Short Break</button>
+            <button class="timer-mode" onclick="setTimerMode('longBreak')">Long Break</button>
+        </div>
+        <div class="timer-settings" id="timer-settings">
+            <div class="time-settings">
+                <label>Pomodoro 
+                    <input type="number" id="pomodoro-time" value="0.25" min="1" oninput="updateTimeSettings()">
+                </label>
+                <label>Short Break 
+                    <input type="number" id="short-break-time" value="0.15" min="1" oninput="updateTimeSettings()">
+                </label>
+                <label>Long Break 
+                    <input type="number" id="long-break-time" value="0.75" min="1" oninput="updateTimeSettings()">
+                </label>
+            </div>
+            <div class="sound-settings">
+                <label>Timer Sound
+                    <select id="timer-sound">
+                        <option value="parinyajai">Parinyajai</option>
+                        <option value="manusve">Manusve</option>
+                        <option value="unknow">Unknow</option>
+                    </select>
+                </label>
+                <input type="range" id="volume-control" min="0" max="100" value="50">
+            </div>
+            <button id="save-button" onclick="saveSettings()">Save</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

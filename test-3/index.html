@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="mode-selector">
+            <label for="mode">Mode:</label>
+            <select id="mode">
+                <option value="personal">Personal</option>
+                <option value="group">Group</option>
+            </select>
+        </div>
+        <div id="timer">
+            <span id="time">20:00</span>
+            <button id="start-pause">Start</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="tab-selector">
+            <button id="pomodoro" class="active">Pomodoro</button>
+            <button id="short-break">Short Break</button>
+            <button id="long-break">Long Break</button>
+            <button id="settings-btn">&#9881;</button>
+        </div>
+        <div id="settings">
+            <label><input type="checkbox" id="auto-transition"> Auto-transition Timer</label>
+            <label><input type="checkbox" id="hide-pomodoro-count"> Hide Pomodoro Count</label>
+            <div>
+                <label for="pomodoro-time">Pomodoro:</label>
+                <input type="number" id="pomodoro-time" value="20">
+            </div>
+            <div>
+                <label for="short-break-time">Short Break:</label>
+                <input type="number" id="short-break-time" value="5">
+            </div>
+            <div>
+                <label for="long-break-time">Long Break:</label>
+                <input type="number" id="long-break-time" value="15">
+            </div>
+            <div>
+                <label for="timer-sound">Timer Sound:</label>
+                <select id="timer-sound">
+                    <option value="twinkle">Twinkle</option>
+                    <option value="alarm">Alarm</option>
+                    <option value="bell">Bell</option>
+                </select>
+            </div>
+            <button id="save-settings">Save Settings</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

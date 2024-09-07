@@ -1,0 +1,96 @@
+body {
+     font-family: Arial, sans-serif;
+     background-color: #f0f0f0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     margin: 0;
+ }
+ 
+ .timer-container {
+     background-color: white;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     width: 300px;
+ }
+ 
+ .timer-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+ 
+ .timer-title {
+     font-size: 18px;
+     font-weight: bold;
+ }
+ 
+ .settings-button {
+     background: none;
+     border: none;
+     font-size: 20px;
+     cursor: pointer;
+ }
+ 
+ .timer-display {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+ 
+ #time-display {
+     font-size: 48px;
+     margin-right: 10px;
+ }
+ 
+ #start-pause-button, #reset-button {
+     font-size: 16px;
+     margin-right: 5px;
+     padding: 5px 10px;
+     cursor: pointer;
+ }
+ 
+ .timer-options {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 10px;
+ }
+ 
+ .timer-mode {
+     flex: 1;
+     padding: 5px;
+     background-color: #f0f0f0;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+ 
+ .timer-mode.active {
+     background-color: #e0e0e0;
+     border-bottom: 2px solid #ff6347;
+ }
+ 
+ .timer-settings {
+     display: none;
+     flex-direction: column;
+     margin-top: 10px;
+ }
+ 
+ .timer-settings label {
+     display: flex;
+     justify-content: space-between;
+     margin-bottom: 5px;
+ }
+ 
+ .time-settings, .sound-settings {
+     margin-top: 10px;
+ }
+ 
+ #volume-control {
+     width: 100%;
+ }
+ 

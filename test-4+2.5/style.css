@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#show-timer-button {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#overlay {
+    display: none; /* Hide the overlay by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.timer-container {
+    display: none; /* Hide the timer container by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 1000;
+}
+
+.timer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.timer-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.timer-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#time-display {
+    font-size: 48px;
+    margin-right: 10px;
+}
+
+#start-pause-button, #reset-button {
+    font-size: 16px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.timer-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.timer-mode {
+    flex: 1;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.timer-mode.active {
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #ff6347;
+}
+
+.timer-settings {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.timer-settings label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.timer-settings input{
+    width: 150px;
+    line-height: 10px;
+}
+
+.time-settings, .sound-settings {
+    margin-top: 10px;
+}
+
+#volume-control {
+    width: 100%;
+}
+
+#save-button {
+    font-size: 16px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #ff9100;
+    border: none;
+    transition: background-color 0.3s;
+    border-radius: 2.5px;
+}
+
+.sound-settings label{
+    width: 100%;
+    line-height: 10px;
+}
+.sound-settings label select{
+    width: 150px;
+    line-height: 30px;
+}
